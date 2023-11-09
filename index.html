@@ -34,13 +34,14 @@
   <body>
     <div class="main-container">
       <header>
-        <i class="W_I_P">WIP : header</i>
-        <nav>
+        <i class="DONE">header: DONE!</i>
+        <nav class="nav-bar">
           <img class="logo" src="./images/logo/Booki.png" alt="Booki logo" />
-          <div>
-            <a href="#">Hébergements</a>
-            <a href="#">Activités</a>
-          </div>
+          <ul class="menu">
+            <!-- Sémantiquement plus approprié que div -->
+            <li class="menu-item"><a href="#">Hébergements</a></li>
+            <li class="menu-item"><a href="#">Activités</a></li>
+          </ul>
         </nav>
       </header>
       <main>

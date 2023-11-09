@@ -102,34 +102,47 @@ a {
 
 /****** Header **********/
 
-.logo {
-  /* margin: 30px 50px; */
-  height: 19px;
-  padding: 30px 50px;
+ul {
+  margin: 0;
+  list-style-type: none;
 }
 
-header nav {
+.logo {
+  height: 19px;
+  padding: 30px 50px;
+  /* margin: 30px 50px; */
+}
+
+.nav-bar {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 }
 
-header nav div {
+.menu {
   display: flex;
+  flex-direction: row;
   padding: 0px 50px;
+  height: 35px;
   gap: 68px;
 }
 
-header nav div a {
-  display: inline-block;
+.menu-item {
+  display: flex;
+  align-items: end;
+  box-sizing: border-box; /* prevente content to move when border width change */
+  height: 100%;
 }
 
-header nav div a:hover {
-  background: red;
+.menu-item:hover {
   color: var(--main-color);
-  border-top: 2px var(--main-color);
+  border-top: 2px solid var(--main-color);
 }
+
+/* .menu a:hover { */
+/*   color: var(--main-color); */
+/*   border-top: 2px solid var(--main-color); */
+/* } */
 
 /* header nav a { */
 /*   display: inline-block; */
