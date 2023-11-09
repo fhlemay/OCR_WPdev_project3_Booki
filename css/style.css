@@ -1,5 +1,6 @@
-/***** Work in progress *****/
+/***** Project management *****/
 .W_I_P {
+  /* work in progress */
   border: 1px solid grey;
   font-size: 0.75em;
   padding-left: 5px;
@@ -11,7 +12,20 @@
   left: 10px;
 }
 
-/* Work in progress and/or to be integrated sections */
+.DONE {
+  /* section integrated */
+  border: 1px solid grey;
+  font-size: 0.75em;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: lightgreen;
+  color: grey;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+}
+
+/* Sections to integrate */
 header,
 .search-section,
 .hebergements,
@@ -21,6 +35,7 @@ footer {
 }
 
 section,
+search,
 footer {
   margin-top: 20px;
 }
