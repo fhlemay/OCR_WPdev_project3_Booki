@@ -28,7 +28,7 @@
 /* Sections to integrate */
 header,
 .search-section,
-.hebergements,
+.main-offers,
 .activites,
 footer {
   border: 2px dotted grey;
@@ -43,6 +43,7 @@ footer {
 /****** General ***********/
 * {
   font-family: "Raleway", sans-serif;
+  margin: 0;
 }
 
 :root {
@@ -77,6 +78,18 @@ a {
   font-size: 22px;
 }
 
+.section-subtitle {
+  /* Here? To reconsider */
+  margin: 8px 0px 0px 0px;
+}
+
+.sub-section-title {
+  /* Bad naming */
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
 .card {
   background-color: white;
   border-radius: 20px;
@@ -100,12 +113,9 @@ a {
   color: var(--main-bg-color);
 }
 
+/************************/
 /****** Header **********/
-
-ul {
-  margin: 0;
-  list-style-type: none;
-}
+/************************/
 
 .logo {
   height: 19px;
@@ -125,11 +135,17 @@ ul {
   padding: 0px 50px;
   height: 35px;
   gap: 68px;
+  margin: 0;
+  list-style-type: none;
 }
 
 .menu-item {
   display: flex;
   align-items: end;
+  /* When box-sizing is set to border-box, the width and height of an element 
+   * are calculated based on its content, padding, and border. This means that
+   * the padding and border of the element are included in the width and height.
+   */
   box-sizing: border-box; /* prevente content to move when border width change */
   height: 100%;
 }
@@ -139,60 +155,196 @@ ul {
   border-top: 2px solid var(--main-color);
 }
 
-/* .menu a:hover { */
-/*   color: var(--main-color); */
-/*   border-top: 2px solid var(--main-color); */
-/* } */
+/*****************************/
+/****** Search section *******/
+/*****************************/
 
-/* header nav a { */
-/*   display: inline-block; */
-/*   height: 35px; */
-/*   padding: 0px 50px; */
-/*   margin: 0px 50px; */
-/* } */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
 
-/****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
+.headline {
+  /* border: 1px dotted grey; */
+}
+
+.search-bar {
+  display: flex;
+  height: 49px;
+}
+
+.search-bar label {
+  display: inline-block;
+  width: 50px;
+  background: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 0 0 15px;
+}
+
+.search-bar label .fa-solid {
+  color: black;
+}
+
+.search-bar input {
+  border: 1px solid var(--main-bg-color);
+  width: 147px; /* As per Figma mockup (???)*/
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 24px;
+}
+
+.search-bar button {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0 15px 15px 0;
+  padding: 15px 16px;
+}
+
+.filter-bar {
+  /* border: 1px dotted grey; */
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 50px;
+}
+
+.filter-bar button {
+  height: 100%;
+  /* flex-grow: 1; */
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 25px;
+  border: 2px solid #d9d9d9;
+  background-color: white;
+  padding: 4px 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-bar button:hover {
+  background-color: var(--filter-bg-color);
+}
+
+.info-bar {
+  /* border: 1px dotted grey; */
+  display: flex;
+  align-items: center;
+  height: 24px;
+  gap: 10px;
+}
+
+.circle {
+  border: 2px solid #d9d9d9;
+  width: 24px;
+  border-radius: 24px 24px 24px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/*****************************************************/
+/****** Offers (Hébergements et Populaires ***********/
+/*****************************************************/
+.offers {
   display: flex;
   justify-content: space-between;
 }
 
-.hebergements-and-populaires section {
+.offers section {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   padding: 30px;
   box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
-.hebergements {
+/*********************************************/
+/****** Main offers (Hébergements) ***********/
+/*********************************************/
+.main-offers {
   width: 65%;
 }
 
-/****** Populaires ***********/
-.populaires {
+.main-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 30px; */
+}
+
+.main-cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 240px; /* -10px --> padding de 2x5px */
+  margin-top: 30px;
+  padding-bottom: 5px; /*15px - 5px (stars bottom) - 5 (card padding) */
+}
+
+.main-cards img {
+  /* width: 100%; */
+  object-fit: cover;
+  /* height: 124px; /* Selon maquette */
+  /* height: 114px; /* 124px - (2 x 5px border) */
+  height: 110px; /* pourquoi 110px ?*/
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.main-cards .card-content {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.main-cards .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.main-cards .card-subtitle {
+  margin: 0;
+}
+
+.main-cards .card-rating {
+  margin-bottom: 5px;
+}
+
+/************************************************/
+/****** Sponsored offers (Populaires) ***********/
+/************************************************/
+.sponsored-offers {
   width: 32%;
 }
 
-.populaires-title {
+.sponsored-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.populaires-cards .card {
+.sponsored-cards .card {
   display: flex;
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
-.populaires-cards img {
+.sponsored-cards img {
   width: 33%;
   height: 136px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
-.populaires-cards .card-content {
+.sponsored-cards .card-content {
   width: 67%;
   padding-left: 15px;
   display: flex;
@@ -201,16 +353,16 @@ ul {
   box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.sponsored-cards .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
+.sponsored-cards .card-subtitle {
   margin: 0;
 }
 
-.populaires-cards .card-rating {
+.sponsored-cards .card-rating {
   margin-bottom: 5px;
 }
 

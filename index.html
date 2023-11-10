@@ -39,34 +39,36 @@
           <img class="logo" src="./images/logo/Booki.png" alt="Booki logo" />
           <ul class="menu">
             <!-- Sémantiquement plus approprié que div -->
-            <li class="menu-item"><a href="#">Hébergements</a></li>
+            <li class="menu-item"><a href="#offers">Hébergements</a></li>
             <li class="menu-item"><a href="#">Activités</a></li>
           </ul>
         </nav>
       </header>
       <main>
         <section class="search-section">
-          <i class="W_I_P">To integrate: search-section</i>
+          <i class="DONE">search-section : DONE!</i>
           <div class="headline">
             <h2 class="section-title">
               Trouvez votre hébergement pour des vacances de rêve
             </h2>
-            <p>En plein centre-ville ou en pleine nature</p>
+            <p class="section-subtitle">
+              En plein centre-ville ou en pleine nature
+            </p>
           </div>
           <form action="">
             <div class="search-bar">
-              <label for="place">
+              <label class="location-dot-bg" for="place">
                 <i class="fa-solid fa-location-dot"></i>
               </label>
-              <input type="text" id="place" />
+              <input type="text" id="place" value="Marseille, France" />
               <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                Rechercher</i>
               </button>
             </div>
           </form>
+          <form action="">
           <div class="filter-bar">
-            <h3 class="sub-section-title">Filtre</h3>
-            <form action="">
+            <h3>Filtre</h3>
               <button type="submit">
                 <i class="fa-solid fa-money-bill-wave"></i>Économique
               </button>
@@ -76,19 +78,22 @@
               <button type="submit">
                 <i class="fa-solid fa-heart"></i>Romantique
               </button>
-              <button type="submit">Nos pépites</button>
-            </form>
+              <button type="submit">
+                <i class="fa-solid fa-fire"></i>Nos pépites
+              </button>
           </div>
+          </form>
           <div class="info-bar">
-            <div class="circle"><i class="fa-solid fa-info"></i></div>
+            <!-- <div class="circle"><i class="fa-solid fa-info"></i></div> -->
+            <img src="./images/icons/info.svg" alt="Info icon">
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
           </div>
         </section>
-        <div class="hebergements-and-populaires">
-          <section class="hebergements">
-            <i class="W_I_P">To integrate: hebergements</i>
+        <div class="offers" id="offers">
+          <section class="main-offers">
+            <i class="DONE">hebergements (main offers) DONE!</i>
             <h2 class="section-title">Hébergements à Marseille</h2>
-            <div class="hebergement-cards">
+            <div class="main-cards">
               <a href="#">
                 <article class="card">
                   <img
@@ -251,17 +256,17 @@
                   </div>
                 </article>
               </a>
+            </div>
               <div class="more-cards">
                 <a href="#"><h3 class="sub-section-title">Afficher plus</h3></a>
               </div>
-            </div>
           </section>
-          <section class="populaires">
-            <div class="populaires-title">
+          <section class="sponsored-offers">
+            <div class="sponsored-title">
               <h2 class="section-title">Les plus populaires</h2>
               <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
             </div>
-            <div class="populaires-cards">
+            <div class="sponsored-cards">
               <a href="#">
                 <article class="card">
                   <img
