@@ -29,7 +29,7 @@
 header,
 .search-section,
 .main-offers,
-.activites,
+.activities,
 footer {
   border: 2px dotted grey;
 }
@@ -62,6 +62,7 @@ body {
 }
 
 .main-container {
+  border: 1px dotted grey;
   width: 100%;
   max-width: 1440px;
   padding: 0 50px;
@@ -276,7 +277,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* gap: 30px; */
 }
 
 .main-cards .card {
@@ -289,7 +289,6 @@ a {
 }
 
 .main-cards img {
-  /* width: 100%; */
   object-fit: cover;
   /* height: 124px; /* Selon maquette */
   /* height: 114px; /* 124px - (2 x 5px border) */
@@ -364,6 +363,43 @@ a {
 
 .sponsored-cards .card-rating {
   margin-bottom: 5px;
+}
+
+/*****************************************/
+/****** Activities (Activités) ***********/
+/*****************************************/
+
+.activities {
+  padding: 30px;
+  box-sizing: border-box;
+  /* border: 1px dotted red; */
+}
+
+.activity-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-cards .card {
+  display: flex;
+  flex-direction: column;
+  width: 297.5px;
+  margin-top: 30px;
+  /* padding-bottom: 5px; */
+  padding: 0 0 0 0;
+}
+
+.activity-cards img {
+  object-fit: cover;
+  height: 380px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.activity-cards .card-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 20px 19px 20px 19px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
