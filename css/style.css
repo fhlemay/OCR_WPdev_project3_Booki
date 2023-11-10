@@ -1,46 +1,6 @@
-/***** Project management *****/
-.W_I_P {
-  /* work in progress */
-  border: 1px solid grey;
-  font-size: 0.75em;
-  padding-left: 5px;
-  padding-right: 5px;
-  background: lightpink;
-  color: grey;
-  position: relative;
-  bottom: 10px;
-  left: 10px;
-}
-
-.DONE {
-  /* section integrated */
-  border: 1px solid grey;
-  font-size: 0.75em;
-  padding-left: 5px;
-  padding-right: 5px;
-  background: lightgreen;
-  color: grey;
-  position: relative;
-  bottom: 10px;
-  left: 10px;
-}
-
-/* Sections to integrate */
-header,
-.search-section,
-.main-offers,
-.activities,
-footer {
-  border: 2px dotted grey;
-}
-
-section,
-search,
-footer {
-  margin-top: 20px;
-}
-
+/**************************/
 /****** General ***********/
+/**************************/
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
@@ -62,11 +22,19 @@ body {
 }
 
 .main-container {
-  border: 1px dotted grey;
+  /* border: 1px dotted grey; */
   width: 100%;
   max-width: 1440px;
-  padding: 0 50px;
+  padding: 0 50px 58px 50px;
   box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 35px; /* Inter-sections gap */
+  margin-top: 30px; /* Header-Main gap */
+  margin-bottom: 35px; /* Footer-Main gap */
 }
 
 a {
@@ -120,7 +88,7 @@ a {
 
 .logo {
   height: 19px;
-  padding: 30px 50px;
+  padding: 30px 50px 30px 0;
   /* margin: 30px 50px; */
 }
 
@@ -133,7 +101,7 @@ a {
 .menu {
   display: flex;
   flex-direction: row;
-  padding: 0px 50px;
+  /* padding: 0px 50px; */
   height: 35px;
   gap: 68px;
   margin: 0;
@@ -208,7 +176,6 @@ a {
 }
 
 .filter-bar {
-  /* border: 1px dotted grey; */
   font-size: 18px;
   font-weight: 700;
   display: flex;
@@ -219,7 +186,6 @@ a {
 
 .filter-bar button {
   height: 100%;
-  /* flex-grow: 1; */
   font-size: 17px;
   font-weight: 700;
   border-radius: 25px;
@@ -236,7 +202,6 @@ a {
 }
 
 .info-bar {
-  /* border: 1px dotted grey; */
   display: flex;
   align-items: center;
   height: 24px;
@@ -254,6 +219,7 @@ a {
 /*****************************************************/
 /****** Offers (Hébergements et Populaires ***********/
 /*****************************************************/
+
 .offers {
   display: flex;
   justify-content: space-between;
@@ -325,6 +291,7 @@ a {
 /************************************************/
 /****** Sponsored offers (Populaires) ***********/
 /************************************************/
+
 .sponsored-offers {
   width: 32%;
 }
@@ -409,6 +376,7 @@ a {
 /*************************/
 /****** Footer ***********/
 /*************************/
+
 footer {
   display: flex;
   /* Property distributes the flex items evenly across the available space, 
