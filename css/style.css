@@ -245,7 +245,7 @@ search {
 /*****************************************************/
 
 .offers {
-  display: flex;
+  display: flex; /* for main and sponsored offers  */
   justify-content: space-between;
 }
 
@@ -256,16 +256,13 @@ search {
   box-sizing: border-box;
 }
 
-/* Stars size adjustment */
-.fa-star {
-  font-size: 13.25px;
-  margin-right: -2px;
-}
-
 /*********************************************/
 /****** Main offers (Hébergements) ***********/
 /*********************************************/
 .main-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   width: 65%;
 }
 
@@ -273,56 +270,42 @@ search {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 30px;
+  gap: 30px;
 }
 
 .main-cards .card {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  width: 240px; /* -10px --> padding de 2x5px */
-  margin-top: 30px;
-  padding-bottom: 5px; /*15px - 5px (stars bottom) - 5 (card padding) */
+  box-sizing: border-box;
+  width: 250px;
 }
 
 .main-cards img {
   object-fit: cover;
-  height: 114px; /* 124px - (2 x 5px border) */
+  box-sizing: border-box;
+  height: 114px;
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .main-cards .card-content {
-  padding-left: 10px; /* 15px - 5px (card padding) */
-  padding-right: 10px; /* 15px - 5px (card padding) */
-  padding-bottom: 10px; /* 15px - 5px (card padding) */
-  padding-top: 4px; /* 15px - 5px (card padding) */
-  gap: 6px; /* Devrait être 8px, ajusté à l'oeil (taille étoiles diff.)*/
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+  padding: 4px 10px 10px 10px; /* !--> Parent has a 5px pad. */
 }
 
 .main-cards .card-title {
-  /* margin-top: 10px; */
   margin-bottom: 8px;
 }
 
-.main-cards .card-subtitle {
-  /* font-size: 14px; */
-  /* margin: 0; */
-}
-
 .main-cards .card-rating {
-  /* margin-bottom: 5px; */
-  /* font-size: 18px; */
+  margin-top: 6px; /* Ajusted visualy, should be 8 px */
 }
 
-/* .more-cards .sub-section-title { */
-/*   padding-top: 30px; */
-/* } */
+/* Stars size adjustment */
+/* Beurk : to respect fidely Figma mockup */
+.main-offers .fa-star {
+  font-size: 13.25px;
+  margin-right: -3px;
+}
 
 /************************************************/
 /****** Sponsored offers (Populaires) ***********/
@@ -372,6 +355,12 @@ search {
   margin-bottom: 5px;
 }
 
+/* Stars size adjustment */
+/* Beurk : to respect fidely Figma mockup */
+.sponsored-offers .fa-star {
+  margin-right: -3px;
+}
+
 /*****************************************/
 /****** Activities (Activités) ***********/
 /*****************************************/
@@ -379,26 +368,27 @@ search {
 .activities {
   padding: 30px;
   box-sizing: border-box;
-  /* border: 1px dotted red; */
 }
 
 .activity-cards {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .activity-cards .card {
   display: flex;
   flex-direction: column;
-  width: 297.5px;
+  flex: 1; /* flex-grow : 1, flex-shrink: 1, flex-basis: 0; */
   margin-top: 30px;
   padding-bottom: 5px;
-  padding: 0 0 0 0;
+  padding: 0;
 }
 
 .activity-cards img {
   object-fit: cover;
   height: 380px;
+  width: 100%; /* Widht of the parent : card */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -406,7 +396,7 @@ search {
 .activity-cards .card-title {
   font-weight: 700;
   font-size: 16px;
-  margin: 20px 19px 20px 19px;
+  margin: 20px 19px 20px 19px; /* As per Figma mockup */
 }
 
 /*************************/
