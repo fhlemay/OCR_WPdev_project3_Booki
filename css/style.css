@@ -10,6 +10,7 @@
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
+  --filter-border-color: #d9d9d9;
 }
 
 .fa-solid {
@@ -98,7 +99,6 @@ a {
 .logo {
   height: 19px;
   padding: 30px 50px 30px 0;
-  /* margin: 30px 50px; */
 }
 
 .nav-bar {
@@ -190,7 +190,7 @@ search {
   font-size: 17px;
   font-weight: 700;
   border-radius: 25px;
-  border: 2px solid #d9d9d9;
+  border: 2px solid var(--filter-border-color);
   background-color: white;
   padding: 4px 17px; /* 19px - 2px (border)*/
   display: flex;
@@ -220,8 +220,6 @@ search {
 }
 
 .filter-bar button:hover {
-  /* BUG : When this effect is activated, weird white bands on next section. */
-  /* Tested with another color : same problem. */
   background-color: var(--filter-bg-color);
 }
 
@@ -230,14 +228,6 @@ search {
   align-items: center;
   height: 24px;
   gap: 10px;
-}
-
-.circle {
-  border: 2px solid #d9d9d9;
-  width: 24px;
-  border-radius: 24px 24px 24px 24px;
-  display: flex;
-  justify-content: center;
 }
 
 /*****************************************************/
@@ -426,9 +416,8 @@ footer {
   gap: 15px;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
 /****** Media queries ***********/
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
   .hebergements-and-populaires {
