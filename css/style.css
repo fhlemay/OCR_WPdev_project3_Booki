@@ -37,6 +37,11 @@ main {
   margin-bottom: 35px; /* Footer-Main gap */
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -56,7 +61,7 @@ a {
   /* Bad naming */
   font-size: 18px;
   font-weight: 700;
-  /* margin-top: 30px; */
+  margin: 0;
 }
 
 .card {
@@ -72,6 +77,10 @@ a {
 
 .card-title {
   font-size: 16px;
+}
+
+.card-subtitle {
+  font-size: 14px;
 }
 
 .euro {
@@ -101,7 +110,6 @@ a {
 .menu {
   display: flex;
   flex-direction: row;
-  /* padding: 0px 50px; */
   height: 35px;
   gap: 68px;
   margin: 0;
@@ -111,10 +119,6 @@ a {
 .menu-item {
   display: flex;
   align-items: end;
-  /* When box-sizing is set to border-box, the width and height of an element 
-   * are calculated based on its content, padding, and border. This means that
-   * the padding and border of the element are included in the width and height.
-   */
   box-sizing: border-box; /* prevente content to move when border width change */
   height: 100%;
 }
@@ -128,38 +132,34 @@ a {
 /****** Search section *******/
 /*****************************/
 
-.search-section {
+search {
   display: flex;
   flex-direction: column;
   gap: 35px;
 }
 
-.headline {
-  /* border: 1px dotted grey; */
-}
-
 .search-bar {
   display: flex;
-  height: 49px;
+  height: 50px;
 }
 
 .search-bar label {
-  display: inline-block;
-  width: 50px;
-  background: var(--main-bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 49px;
+  background: var(--main-bg-color);
   border-radius: 15px 0 0 15px;
 }
 
 .search-bar label .fa-solid {
   color: black;
+  font-size: 18px;
 }
 
 .search-bar input {
   border: 1px solid var(--main-bg-color);
-  width: 147px; /* As per Figma mockup (???)*/
+  width: 195px; /* As per Figma mockup (???) */
   font-weight: 700;
   font-size: 18px;
   padding: 0 24px;
@@ -182,6 +182,7 @@ a {
   align-items: center;
   gap: 15px;
   height: 50px;
+  margin-top: 35px;
 }
 
 .filter-bar button {
@@ -191,13 +192,36 @@ a {
   border-radius: 25px;
   border: 2px solid #d9d9d9;
   background-color: white;
-  padding: 4px 19px;
+  padding: 4px 17px; /* 19px - 2px (border)*/
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+.filter-bar button .fa-solid {
+  height: 22px;
+  width: 22px;
+}
+
+.fa-money-bill-wave {
+  font-size: 19px;
+}
+
+.fa-person {
+  font-size: 22px;
+}
+
+.fa-heart {
+  font-size: 22px;
+}
+
+.fa-fire {
+  font-size: 22px;
+}
+
 .filter-bar button:hover {
+  /* BUG : When this effect is activated, weird white bands on next section. */
+  /* Tested with another color : same problem. */
   background-color: var(--filter-bg-color);
 }
 
@@ -232,6 +256,12 @@ a {
   box-sizing: border-box;
 }
 
+/* Stars size adjustment */
+.fa-star {
+  font-size: 13.25px;
+  margin-right: -2px;
+}
+
 /*********************************************/
 /****** Main offers (Hébergements) ***********/
 /*********************************************/
@@ -243,12 +273,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .main-cards .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   width: 240px; /* -10px --> padding de 2x5px */
   margin-top: 30px;
   padding-bottom: 5px; /*15px - 5px (stars bottom) - 5 (card padding) */
@@ -256,37 +287,42 @@ a {
 
 .main-cards img {
   object-fit: cover;
-  /* height: 124px; /* Selon maquette */
-  /* height: 114px; /* 124px - (2 x 5px border) */
-  height: 110px; /* pourquoi 110px ?*/
+  height: 114px; /* 124px - (2 x 5px border) */
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .main-cards .card-content {
-  padding-left: 15px;
+  padding-left: 10px; /* 15px - 5px (card padding) */
+  padding-right: 10px; /* 15px - 5px (card padding) */
+  padding-bottom: 10px; /* 15px - 5px (card padding) */
+  padding-top: 4px; /* 15px - 5px (card padding) */
+  gap: 6px; /* Devrait être 8px, ajusté à l'oeil (taille étoiles diff.)*/
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
+  /* justify-content: space-between; */
+  /* box-sizing: border-box; */
 }
 
 .main-cards .card-title {
-  margin-top: 10px;
-  margin-bottom: 4px;
+  /* margin-top: 10px; */
+  margin-bottom: 8px;
 }
 
 .main-cards .card-subtitle {
-  margin: 0;
+  /* font-size: 14px; */
+  /* margin: 0; */
 }
 
 .main-cards .card-rating {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
+  /* font-size: 18px; */
 }
 
-.more-cards .sub-section-title {
-  padding-top: 30px;
-}
+/* .more-cards .sub-section-title { */
+/*   padding-top: 30px; */
+/* } */
 
 /************************************************/
 /****** Sponsored offers (Populaires) ***********/

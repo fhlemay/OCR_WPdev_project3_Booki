@@ -44,8 +44,8 @@
         </nav>
       </header>
       <main>
-        <section class="search-section">
-          <div class="headline">
+        <search>
+          <div>
             <h2 class="section-title">
               Trouvez votre hébergement pour des vacances de rêve
             </h2>
@@ -53,39 +53,40 @@
               En plein centre-ville ou en pleine nature
             </p>
           </div>
-          <form action="">
-            <div class="search-bar">
+          <form action="" method="get">
+            <fieldset class="search-bar">
               <label class="location-dot-bg" for="place">
                 <i class="fa-solid fa-location-dot"></i>
               </label>
-              <input type="text" id="place" value="Marseille, France" />
-              <button type="submit">
-                Rechercher</i>
-              </button>
-            </div>
-          </form>
-          <form action="">
-          <div class="filter-bar">
-            <h3>Filtre</h3>
-              <button type="submit">
+              <input
+                type="search"
+                id="place"
+                name="search"
+                placeholder="Marseille, France"
+              />
+              <button type="submit">Rechercher</button>
+            </fieldset>
+            <fieldset class="filter-bar">
+              <h3 class="sub-section-title">Filtres</h3>
+              <button type="button" name="economy" value="true">
                 <i class="fa-solid fa-money-bill-wave"></i>Économique
               </button>
-              <button type="submit">
+              <button type="button" name="family" value="true">
                 <i class="fa-solid fa-person"></i>Familial
               </button>
-              <button type="submit">
+              <button type="button" name="romantic" value="true">
                 <i class="fa-solid fa-heart"></i>Romantique
               </button>
-              <button type="submit">
+              <button type="button" name="our selection" value="true">
                 <i class="fa-solid fa-fire"></i>Nos pépites
               </button>
-          </div>
+            </fieldset>
           </form>
           <div class="info-bar">
-            <img src="./images/icons/info.svg" alt="Info icon">
+            <img src="./images/icons/info.svg" alt="Info icon" />
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
           </div>
-        </section>
+        </search>
         <div class="offers" id="offers">
           <section class="main-offers">
             <h2 class="section-title">Hébergements à Marseille</h2>
@@ -104,10 +105,10 @@
                       </p>
                     </div>
                     <div class="card-rating">
-                      <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                      <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                      <i class="fa-solid fa-star" aria-hidden="true"></i>
+                      <i class="fa-solid fa-star" aria-hidden="true"></i>
+                      <i class="fa-solid fa-star" aria-hidden="true"></i>
+                      <i class="fa-solid fa-star" aria-hidden="true"></i>
                       <i
                         class="fa-xs fa-solid fa-star neutral-star"
                         aria-hidden="true"
@@ -253,9 +254,9 @@
                 </article>
               </a>
             </div>
-              <div class="more-cards">
-                <a href="#"><h3 class="sub-section-title">Afficher plus</h3></a>
-              </div>
+            <!-- <div class="more-cards"> -->
+            <a href="#"><h3 class="sub-section-title">Afficher plus</h3></a>
+            <!-- </div> -->
           </section>
           <section class="sponsored-offers">
             <div class="sponsored-title">
