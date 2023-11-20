@@ -23,9 +23,9 @@ body {
 }
 
 .main-container {
-  /* border: 1px dotted grey; */
   width: 100%;
   max-width: 1440px;
+  min-width: 1024px;
   padding: 0 50px 58px 50px;
   box-sizing: border-box;
 }
@@ -54,12 +54,10 @@ a {
 }
 
 .section-subtitle {
-  /* Here? To reconsider */
   margin: 8px 0px 0px 0px;
 }
 
 .sub-section-title {
-  /* Bad naming */
   font-size: 18px;
   font-weight: 700;
   margin: 0;
@@ -119,7 +117,7 @@ a {
 .menu-item {
   display: flex;
   align-items: end;
-  box-sizing: border-box; /* prevente content to move when border width change */
+  box-sizing: border-box; /* Preventing content to move when border width change */
   height: 100%;
 }
 
@@ -159,7 +157,7 @@ search {
 
 .search-bar input {
   border: 1px solid var(--main-bg-color);
-  width: 195px; /* As per Figma mockup (???) */
+  width: 195px; /* As per Figma mockup */
   font-weight: 700;
   font-size: 18px;
   padding: 0 24px;
@@ -259,13 +257,13 @@ search {
 .main-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 30px;
 }
 
 .main-cards .card {
-  box-sizing: border-box;
-  width: 250px;
+  flex-basis: 29%;
+  /* flex: 1; */
 }
 
 .main-cards img {
