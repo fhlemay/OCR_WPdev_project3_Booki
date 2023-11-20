@@ -23,9 +23,9 @@ body {
 }
 
 .main-container {
-  width: 100%;
+  /* width: 100%; */
   max-width: 1440px;
-  min-width: 1024px;
+  min-width: 1025px;
   padding: 0 50px 58px 50px;
   box-sizing: border-box;
 }
@@ -448,9 +448,4 @@ footer {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
-}
-
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-  /* ... */
 }
