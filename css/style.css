@@ -1,6 +1,7 @@
 /**************************/
 /****** General ***********/
 /**************************/
+
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
@@ -23,7 +24,6 @@ body {
 }
 
 .main-container {
-  /* width: 100%; */
   max-width: 1440px;
   min-width: 1025px;
   padding: 0 50px 58px 50px;
@@ -130,7 +130,7 @@ a {
 /****** Search section *******/
 /*****************************/
 
-search {
+.search {
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -205,14 +205,8 @@ search {
   font-size: 19px;
 }
 
-.fa-person {
-  font-size: 22px;
-}
-
-.fa-heart {
-  font-size: 22px;
-}
-
+.fa-person,
+.fa-heart,
 .fa-fire {
   font-size: 22px;
 }
@@ -295,7 +289,7 @@ search {
 }
 
 .main-cards .card-rating {
-  margin-top: 6px; /* Ajusted visualy, should be 8 px */
+  margin-top: 6px; /* ! --> Ajusted visualy, should be 8 px */
 }
 
 /* Stars size adjustment */

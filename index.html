@@ -35,7 +35,8 @@
       <main>
         <!-- New <search> element added to HTML5 the 24th of March 2023 -->
         <!-- https://www.scottohara.me/blog/2023/03/24/search-element.html -->
-        <search>
+        <!-- <search> element doesn't pass the w3.org HTML validator test. -->
+        <div class="search">
           <div>
             <!-- Main header title -->
             <h1 class="section-title">
@@ -45,15 +46,18 @@
               En plein centre-ville ou en pleine nature
             </p>
           </div>
-          <form action="" method="get">
+          <!-- Form must have an action to pass w3.org validator test. -->
+          <form action="search" method="get">
             <fieldset class="search-bar">
               <label class="location-dot-bg" for="place">
-                <i class="fa-solid fa-location-dot"></i>
+                <!-- The icon is used as semantic element  -->
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span class="fa-sr-only">Localisation</span>
               </label>
               <input
                 type="search"
                 id="place"
-                name="search"
+                name="location"
                 placeholder="Marseille, France"
               />
               <button type="submit">Rechercher</button>
@@ -61,28 +65,29 @@
             <fieldset class="filter-bar">
               <h3 class="sub-section-title">Filtres</h3>
               <button type="button" name="economy" value="true">
-                <i class="fa-solid fa-money-bill-wave"></i>Économique
+                <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i
+                >Économique
               </button>
               <button type="button" name="family" value="true">
-                <i class="fa-solid fa-person"></i>Familial
+                <i class="fa-solid fa-person" aria-hidden="true"></i>Familial
               </button>
               <button type="button" name="romantic" value="true">
-                <i class="fa-solid fa-heart"></i>Romantique
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>Romantique
               </button>
               <button type="button" name="our selection" value="true">
-                <i class="fa-solid fa-fire"></i>Nos pépites
+                <i class="fa-solid fa-fire" aria-hidden="true"></i>Nos pépites
               </button>
             </fieldset>
           </form>
           <div class="info-bar">
             <div class="info-circle">
               <!-- The icon is used as semantic element  -->
-              <i class="fa-solid fa-2xs fa-info aria-hidden=true"></i>
+              <i class="fa-solid fa-2xs fa-info" aria-hidden="true"></i>
               <span class="fa-sr-only">Information</span>
             </div>
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
           </div>
-        </search>
+        </div>
         <div class="offers" id="offers">
           <section class="main-offers">
             <h2 class="section-title">Hébergements à Marseille</h2>
