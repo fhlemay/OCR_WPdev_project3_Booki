@@ -244,7 +244,7 @@ search {
 /*****************************************************/
 
 .offers {
-  display: flex; /* for main and sponsored offers  */
+  display: flex;
   justify-content: space-between;
 }
 
@@ -258,6 +258,7 @@ search {
 /*********************************************/
 /****** Main offers (Hébergements) ***********/
 /*********************************************/
+
 .main-offers {
   display: flex;
   flex-direction: column;
@@ -268,18 +269,17 @@ search {
 .main-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 30px;
+  justify-content: space-between;
+  row-gap: 30px;
 }
 
 .main-cards .card {
-  flex-basis: 29%;
-  /* flex: 1; */
+  box-sizing: border-box; /* 250px with padding, 240 without*/
+  flex-basis: 30.86%; /* (250px / 810px) */
 }
 
 .main-cards img {
   object-fit: cover;
-  box-sizing: border-box;
   height: 114px;
   width: 100%;
   border-top-left-radius: 20px;
@@ -287,8 +287,7 @@ search {
 }
 
 .main-cards .card-content {
-  box-sizing: border-box;
-  padding: 4px 10px 10px 10px; /* !--> Parent has a 5px pad. */
+  padding: 4px 10px 10px 10px; /* !--> Parent has a 5px pad */
 }
 
 .main-cards .card-title {
@@ -300,7 +299,6 @@ search {
 }
 
 /* Stars size adjustment */
-/* Beurk : to respect fidely Figma mockup */
 .main-offers .fa-star {
   font-size: 13.25px;
   margin-right: -3px;

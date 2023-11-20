@@ -25,18 +25,22 @@
         <nav class="nav-bar">
           <img class="logo" src="./images/logo/Booki.png" alt="Booki logo" />
           <ul class="menu">
-            <!-- Sémantiquement plus approprié que div -->
+            <!-- Semantically more appropriate than <div>-->
+            <!-- List of links -->
             <li class="menu-item"><a href="#offers">Hébergements</a></li>
             <li class="menu-item"><a href="#activities">Activités</a></li>
           </ul>
         </nav>
       </header>
       <main>
+        <!-- New <search> element added to HTML5 the 24th of March 2023 -->
+        <!-- https://www.scottohara.me/blog/2023/03/24/search-element.html -->
         <search>
           <div>
-            <h2 class="section-title">
+            <!-- Main header title -->
+            <h1 class="section-title">
               Trouvez votre hébergement pour des vacances de rêve
-            </h2>
+            </h1>
             <p class="section-subtitle">
               En plein centre-ville ou en pleine nature
             </p>
@@ -71,7 +75,11 @@
             </fieldset>
           </form>
           <div class="info-bar">
-            <img src="./images/icons/info.svg" alt="Info icon" />
+            <div class="info-circle">
+              <!-- The icon is used as semantic element  -->
+              <i class="fa-solid fa-2xs fa-info aria-hidden=true"></i>
+              <span class="fa-sr-only">Information</span>
+            </div>
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
           </div>
         </search>
@@ -250,8 +258,8 @@
               <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
             </div>
             <div class="sponsored-cards">
+              <a href="#">
                 <article class="card">
-                <a href="#">
                   <img
                     src="./images/hebergements/emile-guillemot.jpg"
                     alt="Image de la chambre d'hôtel montrant un lit"
